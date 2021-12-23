@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Update{% endblock %}
+{% block content %}
+    <form action="" method="post"> <!--get 방식은 주소에 포함이 되서 넘어감 보안성이 좋지않음 대부분 post 로그인도 post임-->
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Update" class="btn btn-info btn-sm">
+    </form>
+{% endblock %}

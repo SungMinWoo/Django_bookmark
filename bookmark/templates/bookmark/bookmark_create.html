@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Create{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        <!--action은 어느 페이지로 보내줄지 정하는 것 비워두면 자기 자신 method는 어떤 형태로 전달을 할지 인데 주로 장고는 비어두면 get과 post를 다함-->
+        <!--입력이 완료되면 post 페이지를 접근하면 get-->
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Add" class="btn btn-info btn-sm">
+    </form>
+{% endblock %}
